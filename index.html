@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inchara D | Portfolio</title>
+
+<style>
+/* ---------- RESET ---------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* ---------- COLORS ---------- */
+:root{
+    --bg:#0b1120;
+    --card:rgba(255,255,255,0.08);
+    --accent:#6366f1;
+    --accent2:#9333ea;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+}
+
+/* ---------- BODY ---------- */
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* ---------- BACKGROUND GRAPHICS ---------- */
+.blob{
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:radial-gradient(circle,var(--accent),var(--accent2));
+    filter:blur(130px);
+    opacity:0.55;
+    z-index:-1;
+}
+.blob.one{ top:-140px; left:-140px; }
+.blob.two{ bottom:-160px; right:-140px; }
+
+/* ---------- NAVBAR ---------- */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(11,17,32,0.8);
+    backdrop-filter:blur(12px);
+    padding:16px;
+    text-align:center;
+    z-index:1000;
+}
+nav a{
+    color:var(--text);
+    text-decoration:none;
+    margin:0 18px;
+    font-weight:600;
+    font-size:0.95rem;
+}
+nav a:hover{
+    color:#c7d2fe;
+}
+
+/* ---------- SECTIONS ---------- */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:120px 20px 80px;
+}
+
+/* ---------- HOME ---------- */
+#home{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+#home h1{
+    font-size:3.4rem;
+    background:linear-gradient(90deg,#a5b4fc,#f0abfc);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+#home .subtitle{
+    margin-top:12px;
+    font-size:1.2rem;
+}
+#home .tagline{
+    margin-top:6px;
+    color:var(--muted);
+}
+.btn{
+    margin-top:32px;
+    padding:14px 36px;
+    border-radius:30px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 12px 35px rgba(99,102,241,0.45);
+}
+.btn:hover{ transform:scale(1.05); }
+
+/* ---------- CARDS ---------- */
+.card{
+    background:var(--card);
+    backdrop-filter:blur(14px);
+    border-radius:18px;
+    padding:32px;
+    margin-bottom:32px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ---------- HEADINGS ---------- */
+.section-title{
+    font-size:2rem;
+    color:#c7d2fe;
+    margin-bottom:24px;
+    border-left:4px solid var(--accent);
+    padding-left:12px;
+}
+
+/* ---------- GRID ---------- */
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+@media(max-width:800px){
+    .grid-2{ grid-template-columns:1fr; }
+}
+
+/* ---------- SKILLS ---------- */
+.skills span{
+    display:inline-block;
+    padding:10px 18px;
+    margin:8px;
+    border-radius:22px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:white;
+    font-size:0.9rem;
+}
+
+/* ---------- PROJECTS ---------- */
+.project{
+    margin-bottom:26px;
+}
+.project h3{
+    color:#f0abfc;
+    margin-bottom:6px;
+}
+.project p{
+    color:var(--muted);
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline{
+    border-left:3px solid var(--accent);
+    padding-left:24px;
+}
+.timeline-item{
+    margin-bottom:22px;
+}
+.timeline-item h4{
+    color:#e9d5ff;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-info p{
+    margin-bottom:10px;
+    color:var(--muted);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    text-align:center;
+    padding:30px;
+    color:var(--muted);
+    font-size:0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob one"></div>
+<div class="blob two"></div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+<h1>Inchara D</h1>
+<p class="subtitle">Computer Science & Engineering Student</p>
+<p class="tagline">AI • Full-Stack • Android Development</p>
+<a href="#projects" class="btn">View Projects</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+
+<div class="grid-2">
+<div class="card">
+<p>
+I am a motivated Computer Science Engineering student with a strong
+interest in Artificial Intelligence, full-stack development,
+and Android applications. I enjoy building clean, practical,
+user-focused solutions and continuously improving my technical skills.
+</p>
+</div>
+
+<div class="card">
+<h3>Education</h3><br>
+<p><strong>B.E – Computer Science & Engineering</strong><br>
+Rajeev Institute of Technology, Hassan<br>
+CGPA: <strong>9.14</strong></p><br>
+
+<p><strong>12th Grade (PCMC)</strong><br>
+Bharathi School, Coimbatore<br>
+Percentage: <strong>90%</strong></p>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+<h3>Technical Skills</h3><br>
+<div class="skills">
+<span>C</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+<span>Python</span><span>Kotlin</span><span>Jetpack Compose</span>
+<span>Flask</span><span>SQLite</span><span>Canva</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Soft Skills</h3>
+<p>Communication • Teamwork • Problem Solving • Presentation • Adaptability</p>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="card">
+<div class="project">
+<h3>EduBot – AI College Enquiry Chatbot</h3>
+<p>
+NLP-based chatbot built using Python, Flask, and PyTorch
+to answer college-related queries efficiently.
+</p>
+</div>
+
+<div class="project">
+<h3>Karnataka Folk Culture Chatbot</h3>
+<p>
+Bilingual Kannada–English chatbot showcasing Karnataka’s folk culture
+with a responsive and engaging UI.
+</p>
+</div>
+
+<div class="project">
+<h3>SpendSense – Personal Expense Tracker</h3>
+<p>
+Android application developed using Kotlin and Jetpack Compose
+to track expenses, budgets, and spending analytics.
+</p>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2 class="section-title">Experience & Achievements</h2>
+
+<div class="grid-2">
+<div class="card">
+<h3>Experience</h3><br>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Graphic Designer – Ad Grades</h4>
+<p>
+Designed creative assets for marketing campaigns,
+improving brand visibility and engagement.
+</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h3>Achievements & Interests</h3>
+<p>
+• Consistent high academic performance<br>
+• Participation in technical workshops & seminars<br>
+• Interests in UI design, AI tools, and creative problem solving
+</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+
+<div class="card contact-info">
+<p>📧 <strong>Email:</strong> incharagowda915@gmail.com</p>
+<p>📍 <strong>Location:</strong> Hassan, Karnataka</p>
+<p>🔗 <strong>LinkedIn & GitHub:</strong> (add links here)</p>
+</div>
+</section>
+
+<footer>
+Designed & Built by Inchara D • 2025
+</footer>
+
+</body>
+</html>
